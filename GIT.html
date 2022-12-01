@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIT Command Sheet HTML Project</title>
+</head>
+<body>
+    <table align="middle" border="0" cellspacing="0" cellpadding="0">
+        <tr  height="45">
+            <td colspan="4" align="middle"> 
+                <font size="6">
+                    <font size="7"><b>Cheat Sheet for GIT Commands</b></font><sup>EN</sup><br><br>
+                    <b>GIT Komutları için Kopya Dokümanı</b><sup>TR</sup><br><br>
+                    by F3675-AUGUST & T022172-FSB
+                </font>
+            </td>
+            <td><img src="Git-Icon-1788C.png" width="383" height="383"  align="right"></td>
+        </tr>
+        <tr height="45">
+            <td align="middle" width="560" bgcolor="#525866" style="color:white">CREATE</td>
+            <td width="30"></td>
+            <td align="middle" width="560" bgcolor="#525866" style="color:white">Branches & Tags</td>
+            <td width="30"></td>
+            <td align="middle" width="560" bgcolor="#525866" style="color:white">Merge & Rebase</td>
+        </tr>
+        <tr height="45">
+            <td>Clone an existing repository</td>
+            <td></td>
+            <td>List all existing branches</td>
+            <td></td>
+            <td>Merge < branch > into your current HEAD</td>
+        </tr>
+        <tr height="45">
+            <td bgcolor="#fef0b2">$ git clone https://github.com/usernick/reponame</td>
+            <td></td>
+            <td bgcolor="#fef0b2">$ git branch -av</td>
+            <td></td>
+            <td bgcolor="#fef0b2">$ git merge < branch ></td>
+        </tr>
+        <tr height="45">
+            <td>Create a new local repository</td>
+            <td></td>
+            <td>Switch branch</td>
+            <td></td>
+            <td>Rebase your current HEAD onto < branch ></td>
+        </tr>
+        <tr  height="45">
+            <td bgcolor="#fef0b2">$ git init</td>
+            <td></td>
+            <td bgcolor="#fef0b2">$ git switch < branch ></td>
+            <td></td>
+            <td bgcolor="#fef0b2">$ git rebase < branch ></td>
+        </tr>
+        <tr  height="45">
+            <td></td>
+            <td></td>
+            <td>Create a new branch</td>
+            <td></td>
+            <td>Abort a rebase</td>
+        </tr>
+        <tr  height="45">
+            <td align="middle" bgcolor="#525866" style="color:white">LOCAL CHANGES</td>
+            <td></td>
+            <td bgcolor="#fef0b2">$ git branch *isim*</td>
+            <td></td>
+            <td bgcolor="#fef0b2">$ git rebase --abort</td>
+        </tr>
+        <tr  height="45">
+            <td>Changed files in your working directory</td>
+            <td></td>
+            <td>Create a new tracking branch</td>
+            <td></td>
+            <td>Continue a rebase after resolving conflicts</td>
+        </tr>
+        <tr  height="45">
+            <td bgcolor="#fef0b2">$ git status</td>
+            <td></td>
+            <td bgcolor="#fef0b2">$ git checkout --track < branch ></td>
+            <td></td>
+            <td bgcolor="#fef0b2">$ git rebase --continue</td>
+        </tr>
+        <tr  height="45">
+            <td>Changes to tracked files</td>
+            <td></td>
+            <td>Delete a local branch</td>
+            <td></td>
+            <td>Use your configured merge tool to solve conflicts</td>
+        </tr>
+        <tr  height="45">
+            <td bgcolor="#fef0b2">$ git diff</td>
+            <td></td>
+            <td bgcolor="#fef0b2">$ git branch -d < branch ></td>
+            <td></td>
+            <td bgcolor="#fef0b2">$ git mergetool</td>
+        </tr>
+        <tr  height="45">
+            <td>Add all current changes to the next commit</td>
+            <td></td>
+            <td>Mark the current commit with a tag</td>
+            <td></td>
+            <td>Use your editor to manually solve conflicts and (after resolving) mark file as resolved</td>
+        </tr>
+        <tr  height="45">
+            <td bgcolor="#fef0b2">$ git add .</td>
+            <td></td>
+            <td bgcolor="#fef0b2">$ git tag < tag-name ></td>
+            <td></td>
+            <td bgcolor="#fef0b2">$ git add < resolved-file ></td>
+        </tr>
+        <tr  height="45">
+            <td>Add some changes in < file > to the next commit</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td bgcolor="#fef0b2">$ git rm < resolved-file ></td>
+        </tr>
+        <tr  height="45">
+            <td>Commit all local changes in tracked files</td>
+            <td></td>
+            <td align="middle" bgcolor="#525866" style="color:white">UPDATE & PUBLISH</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr  height="45">
+            <td bgcolor="#fef0b2">$ git commit -a</td>
+            <td></td>
+            <td>List all currently configured remotes</td>
+            <td></td>
+            <td align="middle" bgcolor="#525866" style="color:white">UNDO</td>
+        </tr>
+        <tr  height="45">
+            <td>Commit previously staged changes</td>
+            <td></td>
+            <td bgcolor="#fef0b2">$ git remote -v</td>
+            <td></td>
+            <td>Discard all local changes in your working directory</td>
+        </tr>
+        <tr  height="45">
+            <td bgcolor="#fef0b2">$ git commit</td>
+            <td></td>
+            <td>Show information about a remote</td>
+            <td></td>
+            <td bgcolor="#fef0b2">$ git reset --hard HEAD</td>
+        </tr>
+        <tr  height="45">
+            <td>Change the last commit</td>
+            <td></td>
+            <td bgcolor="#fef0b2">$ git remote show < remote ></td>
+            <td></td>
+            <td>Discard local changes in a specific file</td>
+        </tr>
+        <tr  height="45">
+            <td bgcolor="#fef0b2">$ git commit --amend</td>
+            <td></td>
+            <td>Add new remote repository, named < remote ></td>
+            <td></td>
+            <td bgcolor="#fef0b2">$ git checkout HEAD < file ></td>
+        </tr>
+        <tr  height="45">
+            <td></td>
+            <td></td>
+            <td bgcolor="#fef0b2">$ git renıte add < shortname >< url ></td>
+            <td></td>
+            <td>Revert a commit </td>
+        </tr>
+        <tr  height="45">
+            <td align="middle" bgcolor="#525866" style="color:white">COMMIT HISTORY</td>
+            <td></td>
+            <td>Download all changes from < remote >, but don't integrate into HEAD</td>
+            <td></td>
+            <td bgcolor="#fef0b2">$ git revert < commit ></td>
+        </tr>
+        <tr  height="45">
+            <td>Show all commits, starting with newest</td>
+            <td></td>
+            <td bgcolor="#fef0b2">$ git fetch < remote ></td>
+            <td></td>
+            <td>Reset your HEAD pointer to a previous commit ...and discard all changes since then</td>
+        </tr>
+        <tr  height="45">
+            <td bgcolor="#fef0b2">$ git log</td>
+            <td></td>
+            <td>Download changes and directly merge into HEAD</td>
+            <td></td>
+            <td bgcolor="#fef0b2">$ git reset --hard < commit ></td>
+        </tr>
+        <tr  height="45">
+            <td>Show changes over time for a spesific file</td>
+            <td></td>
+            <td bgcolor="#fef0b2">$ git pull < remote >< branch ></td>
+            <td></td>
+            <td>...and preserve all changes as unstaged changes</td>
+        </tr>
+        <tr  height="45">
+            <td bgcolor="#fef0b2">$ git log -p < file ></td>
+            <td></td>
+            <td>Publish local changes on a remote</td>
+            <td></td>
+            <td bgcolor="#fef0b2">$ git reset < commit ></td>
+        </tr>
+        <tr  height="45">
+            <td>Who changed what and when in < file ></td>
+            <td></td>
+            <td bgcolor="#fef0b2">$ git push < remote >< branch ></td>
+            <td></td>
+            <td>...and preserve uncommitted local changes</td>
+        </tr>
+        <tr  height="45">
+            <td></td>
+            <td></td>
+            <td>Delete a branch on the remote</td>
+            <td></td>
+            <td bgcolor="#fef0b2">$ git reset --keep < commit ></td>
+        </tr>
+        <tr  height="45">
+            <td></td>
+            <td></td>
+            <td bgcolor="#fef0b2">$ git branch -dr < remote/branch ></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr  height="45">
+            <td></td>
+            <td></td>
+            <td>Publish your tags</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr  height="45">
+            <td></td>
+            <td></td>
+            <td bgcolor="#fef0b2">$ git push --tags</td>
+            <td></td>
+            <td></td>
+        </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </table>
+    
+</body>
+</html>
